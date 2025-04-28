@@ -78,4 +78,17 @@ $(function() {
         ).children('img').addClass('position-left');
     }
 
+
+    // Indonesian
+    if(i18n.lng() === "id") {
+
+        // Set active class
+        $('.indonesian').parent().addClass('active');
+
+        // Change language in dropdown
+        $('.language-switch').children('.dropdown-toggle').html(
+            $('.language-switch').find('.indonesian').html() + ' <i class="caret" />'
+        ).children('img').addClass('position-left');
+    }
+
 });

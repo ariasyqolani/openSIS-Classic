@@ -79,6 +79,19 @@ $(function() {
     }
 
 
+    // Indonesian
+    if(i18n.lng() === "id") {
+
+        // Set active class
+        $('.indonesian').parent().addClass('active');
+
+        // Change language in dropdown
+        $('.language-switch').children('.dropdown-toggle').html(
+            $('.language-switch').find('.indonesian').html() + ' <i class="caret" />'
+        ).children('img').addClass('position-left');
+    }
+
+
 
     // Change languages in navbar
     // -------------------------
@@ -141,6 +154,25 @@ $(function() {
         // Set active class
         switchContainer.find('li').removeClass('active');
         $('.ukrainian').parent().addClass('active');
+    });
+
+
+    // Indonesian
+    $('.indonesian').on('click', function () {
+
+        // Set language
+        $.i18n.setLng('id', function() {
+            $('body').i18n();
+        });
+
+        // Change lang in dropdown
+        switchContainer.children('.dropdown-toggle').html(
+            $('.indonesian').html() + ' <i class="caret" />'
+        ).children('img').addClass('position-left');
+        
+        // Set active class
+        switchContainer.find('li').removeClass('active');
+        $('.indonesian').parent().addClass('active');
     });
 
 });
