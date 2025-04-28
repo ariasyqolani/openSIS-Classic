@@ -40,7 +40,7 @@ $(function() {
     // Change languages in dropdown
     // -------------------------
 
-    if(i18n.lng() === "en" || "hu" || "es") {
+    if(i18n.lng() === "en" || "hu" || "es" || "id") {
 
         // Set active class
         $('.english').parent().addClass('active');
